@@ -13,18 +13,30 @@ namespace Gestor_Boleteria.CapaDatos
         private ConexionBD conexion = new ConexionBD();
         SqlCommand comando = new SqlCommand();
 
-        public void CrearCompra(int documento, string nombre, string correo, string clave)
+        public void CrearCompra(int Id_Venta, int Documento1, int Id_Boleta1, float Total)
         {
             comando.Connection = conexion.OpenConnection();
             comando.CommandText = "Insertar_Venta";
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@Documento", documento);
-            comando.Parameters.AddWithValue("@Nombres_Apellidos", nombre);
-            comando.Parameters.AddWithValue("@Correo", correo);
-            comando.Parameters.AddWithValue("@Clave", clave);
+            comando.Parameters.AddWithValue("@Id_Venta", Id_Venta);
+            comando.Parameters.AddWithValue("@Documento", Documento1);
+            comando.Parameters.AddWithValue("@Id_Boleta1", Id_Boleta1);
+            comando.Parameters.AddWithValue("@Total", Total);
 
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
+        }
+
+        public void LeerDoc (int Documento)
+        {
+            comando.Connection = conexion.OpenConnection();
+            comando.CommandText = "LeerDoc";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@Id_Venta", Id_Venta);
+
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+
         }
     }
 }

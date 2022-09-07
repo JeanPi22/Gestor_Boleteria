@@ -21,7 +21,7 @@ namespace Gestor_Boleteria.Capa_Usuario
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            objCDusu.CrearUsuario(int.Parse(txtDocumento.Text), txtNom.Text, txtCorreo.Text, txtClave.Text);
+            objCDusu.CrearUsuario (int.Parse(txtDocumento.Text), txtNom.Text, txtCorreo.Text, txtClave.Text);
             MessageBox.Show("Usuario Registrado");
 
             Login login = new Login();

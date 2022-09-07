@@ -32,8 +32,7 @@ namespace Gestor_Boleteria.CapaDatos
             comando.Connection = conexion.OpenConnection();
             comando.CommandText = "Leer_Usuarios";
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@Documento", documento);            
-            comando.Parameters.AddWithValue("@Clave", clave);
+            comando.Parameters.AddWithValue("@Documento", documento); 
 
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();

@@ -30,9 +30,9 @@ namespace Gestor_Boleteria.CapaVenta
         private void InitializeComponent()
         {
             this.labDocBol = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbTri = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblNoBol = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labDocBol
@@ -44,13 +44,13 @@ namespace Gestor_Boleteria.CapaVenta
             this.labDocBol.TabIndex = 0;
             this.labDocBol.Text = "Documento";
             // 
-            // comboBox1
+            // cmbTri
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(316, 245);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 1;
+            this.cmbTri.FormattingEnabled = true;
+            this.cmbTri.Location = new System.Drawing.Point(316, 245);
+            this.cmbTri.Name = "cmbTri";
+            this.cmbTri.Size = new System.Drawing.Size(121, 24);
+            this.cmbTri.TabIndex = 1;
             // 
             // label2
             // 
@@ -61,23 +61,23 @@ namespace Gestor_Boleteria.CapaVenta
             this.label2.TabIndex = 2;
             this.label2.Text = "Tribuna";
             // 
-            // label3
+            // lblNoBol
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(342, 174);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 17);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "No. boleta";
+            this.lblNoBol.AutoSize = true;
+            this.lblNoBol.Location = new System.Drawing.Point(342, 178);
+            this.lblNoBol.Name = "lblNoBol";
+            this.lblNoBol.Size = new System.Drawing.Size(73, 17);
+            this.lblNoBol.TabIndex = 3;
+            this.lblNoBol.Text = "No. boleta";
             // 
             // CompraBoleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblNoBol);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbTri);
             this.Controls.Add(this.labDocBol);
             this.Name = "CompraBoleta";
             this.Text = "CompraBoleta";
@@ -89,8 +89,8 @@ namespace Gestor_Boleteria.CapaVenta
         #endregion
 
         private System.Windows.Forms.Label labDocBol;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbTri;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNoBol;
     }
 }

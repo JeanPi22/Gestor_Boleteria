@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gestor_Boleteria.CapaDatos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,15 @@ namespace Gestor_Boleteria.CapaVenta
 {
     public partial class CompraBoleta : Form
     {
+        DALCompra objCDusu = new DALCompra();
         public CompraBoleta()
         {
             InitializeComponent();
+        }
+
+        private void CamposCompraAct()
+        {
+            
         }
     }
 }
