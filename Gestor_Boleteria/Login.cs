@@ -1,4 +1,6 @@
 ﻿using Gestor_Boleteria.Capa_Usuario;
+using Gestor_Boleteria.CapaDatos;
+using Gestor_Boleteria.CapaVenta;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,9 +13,10 @@ using System.Windows.Forms;
 
 namespace Gestor_Boleteria
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        DALUsuarios objCDusu = new DALUsuarios();
+        public Login()
         {
             InitializeComponent();
         }
@@ -22,6 +25,15 @@ namespace Gestor_Boleteria
         {
             Registro registro = new Registro();
             registro.Show(); //Abrir ventana del formulario de registro
+            this.Hide();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            objCDusu.LeerUsuario(int.Parse(txtLogDoc.Text), txtCont.Text);
+
+            CompraBoleta compra = new CompraBoleta();
+            compra.Show(); //Ir a la ventana de compra
             this.Hide();
         }
     }

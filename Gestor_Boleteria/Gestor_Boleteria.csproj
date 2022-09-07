@@ -54,20 +54,31 @@
     </Compile>
     <Compile Include="Capa Usuario\RegUsuario.cs" />
     <Compile Include="CapaDatos\ConexionBD.cs" />
+    <Compile Include="CapaDatos\DALCompra.cs" />
     <Compile Include="CapaDatos\DALUsuarios.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="CapaVenta\CompraBoleta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="CapaVenta\CompraBoleta.Designer.cs">
+      <DependentUpon>CompraBoleta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaVenta\RegCompra.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Capa Usuario\Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="CapaVenta\CompraBoleta.resx">
+      <DependentUpon>CompraBoleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -91,8 +102,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CapaVenta\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

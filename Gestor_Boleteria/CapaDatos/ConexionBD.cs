@@ -14,7 +14,8 @@ namespace Gestor_Boleteria.CapaDatos
         /// Cadena de conexión para el acceso a la base de datos SQL Server
         /// </summary>
         private SqlConnection Conexion = new
-            SqlConnection("server=DUALIDADPC\\SQLEXPRESS; database=Gestor_Boleteria; integrated security = true");
+            SqlConnection("server=DUALIDADPC\\SQLEXPRESS; database=Gestor_Boleteria;" +
+            "integrated security = true");
 
         /// <summary>
         /// Abrir la conexión hacia la base de datos

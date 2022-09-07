@@ -23,6 +23,10 @@ namespace Gestor_Boleteria.Capa_Usuario
         {
             objCDusu.CrearUsuario(int.Parse(txtDocumento.Text), txtNom.Text, txtCorreo.Text, txtClave.Text);
             MessageBox.Show("Usuario Registrado");
+
+            Login login = new Login();
+            login.Show(); //Regresar al login
+            this.Hide();
         }
     }
 }
