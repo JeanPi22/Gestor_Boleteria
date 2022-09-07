@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gestor_Boleteria.Capa_Usuario;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace Gestor_Boleteria
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btnReg_Click(object sender, EventArgs e)
+        {
+            Registro registro = new Registro();
+            registro.Show(); //Abrir ventana del formulario de registro
+            this.Hide();
         }
     }
 }
