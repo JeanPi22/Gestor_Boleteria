@@ -21,6 +21,12 @@ namespace Gestor_Boleteria
             InitializeComponent();
         }
 
+        //Estructura para pasar dato del documento al formulario de compra
+        public struct Datos
+        {
+            public int Documento;
+        }
+
         private void btnReg_Click(object sender, EventArgs e)
         {
             Registro registro = new Registro();
@@ -32,7 +38,10 @@ namespace Gestor_Boleteria
         {
             objCDusu.LeerUsuario(int.Parse(txtLogDoc.Text), txtCont.Text);
 
-            CompraBoleta compra = new CompraBoleta();
+            Datos doc; // Guardar dato para el otro formulario
+            doc.Documento = int.Parse(txtLogDoc.Text);
+
+            CompraBoleta compra = new CompraBoleta(doc);
             compra.Show(); //Ir a la ventana de compra
             this.Hide();
         }

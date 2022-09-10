@@ -11,17 +11,22 @@ using System.Windows.Forms;
 
 namespace Gestor_Boleteria.CapaVenta
 {
-    public partial class CompraBoleta : Form
-    {
-        DALCompra objCDusu = new DALCompra();
-        public CompraBoleta()
+    public partial class CompraBoleta : Form    {
+        
+        public CompraBoleta(Login.Datos doc)
         {
             InitializeComponent();
+            labDocBol.Text = "Documento: " + doc.Documento;
         }
 
         private void CamposCompraAct()
         {
             
+        }
+
+        private void CompraBoleta_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

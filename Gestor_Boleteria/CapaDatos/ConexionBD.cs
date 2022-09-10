@@ -10,17 +10,12 @@ namespace Gestor_Boleteria.CapaDatos
 {
     class ConexionBD
     {
-        /// <summary>
-        /// Cadena de conexión para el acceso a la base de datos SQL Server
-        /// </summary>
+        //Cadena de conexión para el acceso a la base de datos SQL Server   
         private SqlConnection Conexion = new
             SqlConnection("server=DUALIDADPC\\SQLEXPRESS; database=Gestor_Boleteria;" +
             "integrated security = true");
 
-        /// <summary>
-        /// Abrir la conexión hacia la base de datos
-        /// </summary>
-        /// <returns></returns>
+       // Abrir la conexión hacia la base de datos       
         public SqlConnection OpenConnection()
         {
             if (Conexion.State == ConnectionState.Closed)
@@ -28,10 +23,7 @@ namespace Gestor_Boleteria.CapaDatos
             return Conexion;
         }
 
-        /// <summary>
-        /// Cerrar la conexión hacia la base de datos
-        /// </summary>
-        /// <returns></returns>
+        // Cerrar la conexión hacia la base de datos       
         public SqlConnection CloseConnection()
         {
             if (Conexion.State == ConnectionState.Open)

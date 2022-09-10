@@ -54,7 +54,6 @@
     </Compile>
     <Compile Include="Capa Usuario\RegUsuario.cs" />
     <Compile Include="CapaDatos\ConexionBD.cs" />
-    <Compile Include="CapaDatos\DALCompra.cs" />
     <Compile Include="CapaDatos\DALUsuarios.cs" />
     <Compile Include="CapaVenta\CompraBoleta.cs">
       <SubType>Form</SubType>

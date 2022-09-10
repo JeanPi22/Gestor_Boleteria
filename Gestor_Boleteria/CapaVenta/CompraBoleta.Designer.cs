@@ -81,6 +81,7 @@ namespace Gestor_Boleteria.CapaVenta
             this.Controls.Add(this.labDocBol);
             this.Name = "CompraBoleta";
             this.Text = "CompraBoleta";
+            this.Load += new System.EventHandler(this.CompraBoleta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

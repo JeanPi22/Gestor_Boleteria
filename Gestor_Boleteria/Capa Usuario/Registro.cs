@@ -17,12 +17,12 @@ namespace Gestor_Boleteria.Capa_Usuario
         public Registro()
         {
             InitializeComponent();
-        }
+        }        
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             objCDusu.CrearUsuario (int.Parse(txtDocumento.Text), txtNom.Text, txtCorreo.Text, txtClave.Text);
-            MessageBox.Show("Usuario Registrado");
+            MessageBox.Show("Usuario Registrado");            
 
             Login login = new Login();
             login.Show(); //Regresar al login
