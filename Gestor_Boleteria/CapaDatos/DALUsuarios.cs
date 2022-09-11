@@ -30,7 +30,7 @@ namespace Gestor_Boleteria.CapaDatos
         public void LeerUsuario(int documento, string clave)
         {
             comando.Connection = conexion.OpenConnection();
-            comando.CommandText = "Leer_Usuarios";
+            comando.CommandText = "Leer_Usuarios_Login";
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@Clave", clave);
             comando.Parameters.AddWithValue("@Documento", documento); 
